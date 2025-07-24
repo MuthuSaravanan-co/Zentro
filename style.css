@@ -613,11 +613,7 @@ html, body {
 
 
 
-  @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    overflow-x: ;
-    min-height: 100vh;
+ vh;
     align-items:normal;
     
     
