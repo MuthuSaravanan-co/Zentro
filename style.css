@@ -613,42 +613,120 @@ html, body {
 
 
 
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
   body {
     flex-direction: column;
     overflow-x: hidden;
     width: 100%;
-    }
+    margin: 0;
+    padding: 0;
+  }
 
   .head {
     flex-wrap: wrap;
-    gap: 1px;
     justify-content: center;
-    display: flex;
-    align-items: center;
-    height:60px;
-    padding: 0px;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
   }
-  .search{
-    width: 140px;
+
+  .search {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
     border-radius: 50px;
-    margin-left: 0px;
-    padding: 0px;
-    margin-right: 0px;
   }
 
-  .bell{
-    margin-left: 5px;
+  .search input {
+    font-size: 18px;
   }
 
-  .select{
-    margin-left: 4px;
-    margin-top: 7px;
+  .select {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px auto;
   }
 
-  .content-section,.content-section1,.content-section2
-  ,.content-section3{
-    margin-top: 10px;
+  .all, .music, .videos, .news {
+    width: auto;
+    padding: 5px 15px;
+    font-size: 14px;
   }
-  
+
+  .content-section,
+  .content-section1,
+  .content-section2,
+  .content-section3 {
+    padding: 10px;
+    height: auto;
+    font-size: 16px;
+  }
+
+  .musicpage,
+  .musicpage1,
+  .musicpage2,
+  .musicpage3,
+  .musicpage4,
+  .musicpage5,
+  .videopage,
+  .videopage1,
+  .videopage2,
+  .videopage3,
+  .videopage4,
+  .videopage5,
+  .newspage,
+  .newspage1,
+  .newspage2,
+  .newspage3,
+  .newspage4,
+  .newspage5 {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .playlist,
+  .play,
+  .playnew,
+  .videolist,
+  .newbox {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .imgs {
+    width: 100px;
+    height: 100px;
+  }
+
+  .muhead, .vihead, .vihead1, .newhead {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #musicPlayerBar {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #musicPlayerBar img {
+    height: 40px;
+    width: 40px;
+  }
+
+  #songInfo {
+    width: 100%;
+  }
+
+  #progressBar {
+    width: 100%;
+  }
 }
