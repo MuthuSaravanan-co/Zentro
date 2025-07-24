@@ -772,7 +772,7 @@ html, body {
     margin-left:px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 380px) {
   body {
     flex-direction: column;
     overflow-x: hidden;
@@ -913,20 +913,45 @@ html, body {
     margin: 10px 0;
   }
 
+ 
+
+  .logo,.home,.heart,.bell,.user,.settings{
+    
+    height: 30px;
+    width: 30px;
+    
+    
+  }
+ 
+  
+
+  .logobtn,.homebtn,.heartbtn,.bellbtn,.userbtn,.settingsbtn{
+    
+    height: 30px;
+    width: 30px;
+     align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
   #musicPlayerBar {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 12px;
+  padding: 6px 10px;
   gap: 10px;
   height: 60px;
+  max-width: 350px; /* ✅ limit width */
   background-color: #222;
   border-top: 1px solid #444;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  margin: 0 auto; /* ✅ center horizontally */
   z-index: 1000;
+  margin-left: 2px;
 }
 
 #musicPlayerBar img {
@@ -940,49 +965,38 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 12px;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
-  color: #fff;
+  position: relative;
+  font-size: 12px;
+  color: #ffffff;
 }
 
 #songTitle {
+  display: inline-block;
   font-weight: bold;
   font-size: 14px;
   margin: 0;
+  white-space: nowrap;
+  animation: scrollTitle 18s linear infinite;
 }
 
-#progressBar {
-  width: 100%;
-  height: 4px;
-  background-color: #555;
-  margin-top: 5px;
-  border-radius: 2px;
-}
-
-#progress {
-  height: 100%;
-  background-color: #1db954;
-  border-radius: 2px;
-}
-
-  .logo,.home,.heart,.bell,.user,.settings{
-    
-    height: 30px;
-    width: 30px;
-    
-    
+@keyframes scrollTitle {
+  0% {
+    transform: translateX(100%);
   }
-
-  
-
-  .logobtn,.homebtn,.heartbtn,.bellbtn,.userbtn,.settingsbtn{
-    
-    height: 30px;
-    width: 30px;
-     align-items: center;
-    justify-content: center;
-    display: flex;
+  100% {
+    transform: translateX(-100%);
   }
+}
+
+#playButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 }
