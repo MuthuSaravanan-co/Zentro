@@ -613,12 +613,11 @@ html, body {
 
 
 
- vh;
-    align-items:normal;
-    
-    
- 
-
+  @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
     }
 
   .head {
