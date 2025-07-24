@@ -630,7 +630,7 @@ html, body {
     padding: 0px;
     height: 60px;
   }
-
+  
   .search {
     width: 120px;
     max-width: 300px;
@@ -752,7 +752,7 @@ html, body {
   .head {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2px;
+    gap: 13px;
    
     padding: 0px;
     height: 50px;
@@ -765,32 +765,74 @@ html, body {
     margin-left: 3px ;
     border-radius: 50px;
     margin-right: 0px;
+    display: none;
   }
 
   .search input {
     font-size: 14px;
+    display: none;
   }
 
   .select {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin: 10px auto;
+    margin-left: 3px ;
   }
 
-  .all, .music, .videos, .news {
-    width: auto;
+  .all {
+    width: 27px;
+    height: 10px;
     padding: 5px 15px;
-    font-size: 14px;
+    font-size: 11px;
   }
 
-  .content-section,
-  .content-section1,
-  .content-section2,
-  .content-section3 {
+  .music {
+    width: 33px;
+    height: 10px;
+    padding: 5px 15px;
+    font-size: 11px;
+  }
+   .videos {
+    width: 44px;
+    height: 10px;
+    padding: 5px 15px;
+    font-size: 11px;
+  }
+
+  .news {
+    width: 33px;
+    height: 10px;
+    padding: 5px 15px;
+    font-size: 11px;
+  }
+
+  .content-section
+  {
+    padding: px;
+    height: auto;
+    font-size: 16px;
+  }
+
+  .content-section1{
     padding: 10px;
     height: auto;
     font-size: 16px;
+
+  }
+
+  .content-section2{
+    padding: 10px;
+    height: auto;
+    font-size: 16px;
+
+  }
+
+  .content-section3{
+    padding: 10px;
+    height: auto;
+    font-size: 16px;
+
   }
 
   .musicpage,
@@ -840,25 +882,58 @@ html, body {
   }
 
   #musicPlayerBar {
-    flex-direction: column;
-    height: auto;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px;
-  }
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  gap: 10px;
+  height: 60px;
+  background-color: #222;
+  border-top: 1px solid #444;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  #musicPlayerBar img {
-    height: 40px;
-    width: 40px;
-  }
+#musicPlayerBar img {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+}
 
-  #songInfo {
-    width: 100%;
-  }
+#songInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+}
 
-  #progressBar {
-    width: 100%;
-  }
+#songTitle {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+#progressBar {
+  width: 100%;
+  height: 4px;
+  background-color: #555;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+#progress {
+  height: 100%;
+  background-color: #1db954;
+  border-radius: 2px;
+}
 
   .logo,.home,.heart,.bell,.user,.settings{
     
