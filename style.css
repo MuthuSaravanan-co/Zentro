@@ -952,6 +952,8 @@ html, body {
   margin: 0 auto; /* ✅ center horizontally */
   z-index: 1000;
   margin-left: 2px;
+  transform: translateY(0);
+  will-change: transform;
 }
 
 #musicPlayerBar img {
