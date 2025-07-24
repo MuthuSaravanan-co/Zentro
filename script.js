@@ -144,3 +144,11 @@ function togglePlayPause(card = null, songPath = null, title = "Unknown", cover 
     }
   }
 }
+
+
+  // Prevent mobile keyboard and scroll from pushing the bar
+  const wrapper = document.getElementById("playerWrapper");
+  window.addEventListener("resize", () => {
+    wrapper.style.bottom = "0px";
+  });
+

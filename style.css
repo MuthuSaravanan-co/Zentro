@@ -956,6 +956,32 @@ html, body {
   will-change: transform;
 }
 
+/* Sticky wrapper with fixed positioning that works on mobile */
+#playerWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none; /* prevents touch bugs */
+}
+
+/* Actual player bar inside wrapper */
+#musicPlayerBar {
+  pointer-events: auto;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #222;
+  border-top: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  height: 60px;
+
+}
+
+
 #musicPlayerBar img {
   height: 40px;
   width: 40px;
