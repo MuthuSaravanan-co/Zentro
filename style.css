@@ -625,16 +625,18 @@ html, body {
   .head {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    height: auto;
-    padding: 10px;
+    gap: 2px;
+   
+    padding: 0px;
+    height: 60px;
   }
 
   .search {
-    width: 90%;
+    width: 120px;
     max-width: 300px;
-    margin: 10px auto;
+    margin-left: 3px ;
     border-radius: 50px;
+    margin-right: 0px;
   }
 
   .search input {
@@ -728,5 +730,13 @@ html, body {
 
   #progressBar {
     width: 100%;
+  }
+
+  .logo{
+    margin-left: -10px;
+  }
+
+  .bell,.user,.settings{
+    margin-left:px;
   }
 }
