@@ -755,11 +755,12 @@ html, body {
     gap: 2px;
    
     padding: 0px;
-    height: 60px;
+    height: 50px;
   }
 
   .search {
-    width: 120px;
+    width: 30px;
+    height: 30px;
     max-width: 300px;
     margin-left: 3px ;
     border-radius: 50px;
@@ -767,7 +768,7 @@ html, body {
   }
 
   .search input {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .select {
@@ -859,11 +860,22 @@ html, body {
     width: 100%;
   }
 
-  .logo{
-    margin-left: -10px;
+  .logo,.home,.heart,.bell,.user,.settings{
+    
+    height: 30px;
+    width: 30px;
+    
+    
   }
 
-  .bell,.user,.settings{
-    margin-left:px;
+  
+
+  .logobtn,.homebtn,.heartbtn,.bellbtn,.userbtn,.settingsbtn{
+    
+    height: 30px;
+    width: 30px;
+     align-items: center;
+    justify-content: center;
+    display: flex;
   }
 }
