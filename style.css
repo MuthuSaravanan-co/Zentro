@@ -958,7 +958,7 @@ html, body {
 
 /* Sticky wrapper with fixed positioning that works on mobile */
 #playerWrapper {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   right: 0;
