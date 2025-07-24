@@ -616,6 +616,8 @@ html, body {
   @media (max-width: 768px) {
   body {
     flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh;
     }
 
   .head {
