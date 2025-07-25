@@ -772,7 +772,7 @@ html, body {
     margin-left:px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 372px) {
   body {
     flex-direction: column;
     overflow-x: hidden;
