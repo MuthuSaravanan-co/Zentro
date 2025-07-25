@@ -637,21 +637,22 @@ html, body {
   .head {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2px;
+    gap: 30px;
     padding: 0px;
     height: 60px;
   }
 
   .search {
-    width: 120px;
+    width: 180px;
     margin-left: 3px;
     display: flex;
+    margin-right: 0px;
   }
 
   .select {
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px auto;
+    margin-left: -290px;
   }
 
   .all, .music, .videos, .news {
@@ -668,6 +669,7 @@ html, body {
     padding: 10px;
     height: auto;
     font-size: 16px;
+    margin-top: 10px;
   }
 
   .musicpage,
@@ -731,12 +733,14 @@ html, body {
   }
 
   .select {
-    margin-left: 0;
+    margin-left: -48px;
+    margin-top: 10px;
+    gap:8px;
   }
 
   .all, .music, .videos, .news {
-    padding: 3px 9px;
-    font-size: 10px;
+    padding: 2px 7px;
+    font-size: 7px;
   }
 
   .content-section,
@@ -754,4 +758,36 @@ html, body {
   .logo,.logobtn{
     margin-left: 4px;
   }
+
+  .playlist{
+    width: 140px;
+  }
+
+ 
+
+#songInfo {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+#songTitle {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 18s linear infinite;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 100%; /* so it starts offscreen */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 }
