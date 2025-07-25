@@ -719,6 +719,7 @@ html, body {
 
   .head {
     width: 100%; /* ✅ FIXED */
+    gap: 3px;
   }
 
   .search {
@@ -734,8 +735,8 @@ html, body {
   }
 
   .all, .music, .videos, .news {
-    padding: 5px 15px;
-    font-size: 11px;
+    padding: 3px 9px;
+    font-size: 10px;
   }
 
   .content-section,
@@ -748,5 +749,9 @@ html, body {
   #musicPlayerBar {
     max-width: 100%; /* ✅ FIXED */
     margin-left: 0;
+  }
+
+  .logo,.logobtn{
+    margin-left: 4px;
   }
 }
