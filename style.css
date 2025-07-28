@@ -929,9 +929,13 @@ body {
     white-space: nowrap;
     animation: scrollText 18s linear infinite;
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
     padding-left: 100%;
     /* so it starts offscreen */
+  }
+
+  #timeControls{
+    font-size: 13px;
   }
 
   @keyframes scrollText {
