@@ -1,384 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Zentro</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div class="main">
+  <div class="main">
 
-  <div class="head">
-    <div class="logo">
-      <img src="ChatGPT Image Jul 20, 2025, 07_41_40 PM.png" class="logobtn">
-    </div>
-    <div class="home">
-      <i class="fas fa-home homebtn"></i>
-    </div>
-    <div class="heart">
-      <i class="fas fa-heart heartbtn"></i>
-    </div>
-    <div class="search">
-      <i class="fas fa-search icon-left"></i>
-      <input type="text" placeholder="Search" >
-    </div>
-    <div class="bell">
-      <i class="fas fa-bell bellbtn"></i>
-    </div>
-    <div class="user">
-      <i class="fas fa-user userbtn"></i>
-    </div>
-    <div class="settings">
-      <i class="fas fa-cog settingsbtn "onclick="toggleMenu()" ></i>
-      <div class="settings-menu" id="settingsMenu">
-    <ul>
-  <li onclick="logout()">Log out</li>
-  <li onclick="toggleThemeOptions()">Change Theme ▸</li>
-  <ul class="theme-options" id="themeOptions">
-    <li onclick="setTheme('#73e6cb')"><span class="color-box" style="background-color:#73e6cb;" ></span> Aqua</li>
-    <li onclick="setTheme('#fffb00')"><span class="color-box" style="background-color:#fffb00;" ></span> Yellow</li>
-    <li onclick="setTheme('#9412ff')"><span class="color-box" style="background-color:#9412ff;"></span> Purple</li>
-    <li onclick="setTheme('#ff4757')"><span class="color-box" style="background-color:#ff4757;"></span> Red</li>
-    <li onclick="setTheme('#44ff1e')"><span class="color-box" style="background-color:#44ff1e;"></span> Green</li>
-    <li onclick="setTheme('#1e90ff')"><span class="color-box" style="background-color:#1e90ff;"></span> Blue</li>
-  </ul>
-  <li onclick="alert('Zentro v1.0    is your one-stop platform for the latest in music, trending videos, and breaking news.Discover exclusive songs, viral reels, and entertainment all in one place.Stay updated with real-time news from around the world, anytime, anywhere.Experience seamless content, curated just for you—music, media, and more!')">About</li>
-</ul>
+    <div class="head">
+      <div class="logo">
+        <img src="ChatGPT Image Jul 20, 2025, 07_41_40 PM.png" class="logobtn">
+      </div>
+      <div class="home">
+        <i class="fas fa-home homebtn"></i>
+      </div>
+      <div class="heart">
+        <i class="fas fa-heart heartbtn"></i>
+      </div>
+      <div class="search">
+        <i class="fas fa-search icon-left"></i>
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="bell">
+        <i class="fas fa-bell bellbtn"></i>
+      </div>
+      <div class="user">
+        <i class="fas fa-user userbtn"></i>
+      </div>
+      <div class="settings">
+        <i class="fas fa-cog settingsbtn " onclick="toggleMenu()"></i>
+        <div class="settings-menu" id="settingsMenu">
+          <ul>
+            <li onclick="logout()">Log out</li>
+            <li onclick="toggleThemeOptions()">Change Theme ▸</li>
+            <ul class="theme-options" id="themeOptions">
+              <li onclick="setTheme('#73e6cb')"><span class="color-box" style="background-color:#73e6cb;"></span> Aqua
+              </li>
+              <li onclick="setTheme('#fffb00')"><span class="color-box" style="background-color:#fffb00;"></span> Yellow
+              </li>
+              <li onclick="setTheme('#9412ff')"><span class="color-box" style="background-color:#9412ff;"></span> Purple
+              </li>
+              <li onclick="setTheme('#ff4757')"><span class="color-box" style="background-color:#ff4757;"></span> Red
+              </li>
+              <li onclick="setTheme('#44ff1e')"><span class="color-box" style="background-color:#44ff1e;"></span> Green
+              </li>
+              <li onclick="setTheme('#1e90ff')"><span class="color-box" style="background-color:#1e90ff;"></span> Blue
+              </li>
+            </ul>
+            <li
+              onclick="alert('Zentro v1.0    is your one-stop platform for the latest in music, trending videos, and breaking news.Discover exclusive songs, viral reels, and entertainment all in one place.Stay updated with real-time news from around the world, anytime, anywhere.Experience seamless content, curated just for you—music, media, and more!')">
+              About</li>
+          </ul>
 
-  </div>
+        </div>
+      </div>
     </div>
-  </div>
-<div class="select">
-  <div class="all">
-   <h1 >ALL</h1>
+    <div class="select">
+      <div class="all">
+        <h1>ALL</h1>
 
+      </div>
+
+      <div class="music">
+        <h1>Music</h1>
+      </div>
+      <div class="videos">
+        <h1>Videos</h1>
+      </div>
+      <div class="news">
+        <h1>News</h1>
+      </div>
+
+    </div>
+    <div class="content-section" id="allContent">
+      <h1 class="muhead">Music</h1>
+      <div class="playbox">
+
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/monica.mp3',' Monica (From _Coolie_) (Tamil)', 'images/Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Monica (From Coolie)</p>
+        </div>
+
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Chikitu (From _Coolie_) (Tamil) - Anirudh Ravichander.mp3','Chikitu (From _Coolie_) (Tamil)', 'images/Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg')">
+          <img src="Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Chikitu (From Coolie) (Tamil)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Rise Of Dragon - From _Dragon_ - Leon James.mp3','Rise Of Dragon - From _Dragon_', 'images/Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg')">
+          <img src="Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Rise Of Dragon (From Dragon)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Jinguchaa (From _Thug Life_) (Tamil) - A.R. Rahman.mp3','Jinguchaa (From _Thug Life_) (Tamil)', 'images/Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg')">
+          <img
+            src="Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Jinguchaa (From Thug Life) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - K For Kabaradakkam (From _Guruvayoorambala Nadayil_) - Ankit Menon.mp3','K For Kabaradakkam (From _Guruvayoorambala Nadayil_)', 'images/Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg')">
+          <img
+            src="Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">K For Kabaradakkam </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Kanimaa (From _Retro_) - Santhosh Narayanan.mp3',' Kanimaa (From _Retro_)', 'images/Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg')">
+          <img src="Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Kanimaa (From _Retro_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Og Sambavam ( Good Bad Ugly)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
+          <img
+            src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">God Bless U (GoodBadUgly) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
+          <img
+            src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Matta (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
+          <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Makkamishi - From _Brother</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
+          <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Spark (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
+          <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Vandha Edam (From _Jawan_)</p>
+        </div>
+      </div>
+      <h1 class="vihead">Videos</h1>
+      <div class="playbox">
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+        <div class="play"></div>
+
+      </div>
+      <h1 class="newhead">News</h1>
+      <div class="playbox">
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+        <div class="playnew"></div>
+
+      </div>
+
+    </div>
+    <div class="content-section1" id="musicContent" style="display: none;">
+      <h1 class="muhead">Music</h1>
+      <div class="musicpage">
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/monica.mp3',' Monica (From _Coolie_) (Tamil)', 'images/Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Monica (From Coolie)</p>
+        </div>
+
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Chikitu (From _Coolie_) (Tamil) - Anirudh Ravichander.mp3','Chikitu (From _Coolie_) (Tamil)', 'images/Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg')">
+          <img src="Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Chikitu (From Coolie) (Tamil)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Rise Of Dragon - From _Dragon_ - Leon James.mp3','Rise Of Dragon - From _Dragon_', 'images/Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg')">
+          <img src="Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Rise Of Dragon (From Dragon)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Jinguchaa (From _Thug Life_) (Tamil) - A.R. Rahman.mp3','Jinguchaa (From _Thug Life_) (Tamil)', 'images/Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg')">
+          <img
+            src="Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Jinguchaa (From Thug Life) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - K For Kabaradakkam (From _Guruvayoorambala Nadayil_) - Ankit Menon.mp3','K For Kabaradakkam (From _Guruvayoorambala Nadayil_)', 'images/Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg')">
+          <img
+            src="Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">K For Kabaradakkam </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Kanimaa (From _Retro_) - Santhosh Narayanan.mp3',' Kanimaa (From _Retro_)', 'images/Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg')">
+          <img src="Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Kanimaa (From _Retro_)</p>
+        </div>
+
+
+      </div>
+      <div class="musicpage1">
+       <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Og Sambavam ( GBU)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
+          <img
+            src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">God Bless U (GoodBadUgly) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
+          <img
+            src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Matta (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
+          <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Makkamishi - From _Brother</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
+          <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Spark (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
+          <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Vandha Edam (From _Jawan_)</p>
+        </div>
+      </div>
+
+     <div class="musicpage1">
+       <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Og Sambavam ( GBU)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
+          <img
+            src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">God Bless U (GoodBadUgly) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
+          <img
+            src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Matta (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
+          <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Makkamishi - From _Brother</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
+          <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Spark (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
+          <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Vandha Edam (From _Jawan_)</p>
+        </div>
+      </div>
+      <div class="musicpage1">
+       <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Kannadi Poove (From _Retro_) - Santhosh Narayanan.mp3','Kannadi Poove (From _Retro_)', 'images/kanadi pove.png ')">
+          <img
+            src="kanadi pove.png"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Kannadi Poove (From _Retro_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Katchi Sera - From _Think Indie_ - Sai Abhyankkar.mp3 ','Katchi Sera -Sai Abhyankkar', 'images/katchi sera.png')">
+          <img
+            src="katchi sera.png"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Katchi Sera -Sai Abhyankkar </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
+          <img
+            src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Matta (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
+          <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Makkamishi - From _Brother</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
+          <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Spark (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
+          <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Vandha Edam (From _Jawan_)</p>
+        </div>
+      </div>
+      <div class="musicpage1">
+       <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Og Sambavam ( GBU)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
+          <img
+            src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">God Bless U (GoodBadUgly) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
+          <img
+            src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Matta (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
+          <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Makkamishi - From _Brother</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
+          <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Spark (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
+          <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Vandha Edam (From _Jawan_)</p>
+        </div>
+      </div>
+      <div class="musicpage1">
+       <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
+          <img
+            src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Og Sambavam ( GBU)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
+          <img
+            src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">God Bless U (GoodBadUgly) </p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
+          <img
+            src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Matta (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
+          <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Makkamishi - From _Brother</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
+          <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg"
+            class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name"> Spark (From _GOAT_)</p>
+        </div>
+        <div class="playlist"
+          onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
+          <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
+          <div class="play-overlay">
+            <i class="fas fa-play"></i>
+          </div>
+          <p class="song-name">Vandha Edam (From _Jawan_)</p>
+        </div>
+      </div>
+    </div>
+    <div class="content-section2" id="videosContent" style="display: none;">
+      <h1 class="vihead1">Videos</h1>
+      <div class="videopage">
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+      </div>
+      <div class="videopage1">
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+      </div>
+      <div class="videopage2">
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+      </div>
+      <div class="videopage3">
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+      </div>
+      <div class="videopage4">
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+      </div>
+      <div class="videopage5">
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+        <div class="videolist"></div>
+      </div>
+    </div>
+    <div class="content-section3" id="newsContent" style="display: none;">
+      <h1 class="vihead1">News</h1>
+      <div class="newspage">
+        <div class="newbox"></div>
+        <div class="newbox"></div>
+      </div>
+      <div class="newspage1">
+        <div class="newbox"></div>
+        <div class="newbox"></div>
+      </div>
+      <div class="newspage2">
+        <div class="newbox"></div>
+        <div class="newbox"></div>
+      </div>
+      <div class="newspage3">
+        <div class="newbox"></div>
+        <div class="newbox"></div>
+      </div>
+      <div class="newspage4">
+        <div class="newbox"></div>
+        <div class="newbox"></div>
+      </div>
+      <div class="newspage5">
+        <div class="newbox"></div>
+        <div class="newbox"></div>
+      </div>
+    </div>
   </div>
-  
-  <div class="music">
-    <h1 >Music</h1>
-  </div>
-  <div class="videos">
-    <h1 >Videos</h1>
-  </div>
-  <div class="news">
-    <h1 >News</h1>
-  </div>
-  
-</div>
- <div class="content-section" id="allContent">
-   <h1 class="muhead">Music</h1>
-   <div class="playbox">
-     
-     <div class="playlist" onclick="togglePlayPause(this, 'audio/monica.mp3',' Monica (From _Coolie_) (Tamil)', 'images/Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg')">
-        <img src="Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-     <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Chikitu (From _Coolie_) (Tamil) - Anirudh Ravichander.mp3','Chikitu (From _Coolie_) (Tamil)', 'images/Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg')">
-        <img src="Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Rise Of Dragon - From _Dragon_ - Leon James.mp3','Rise Of Dragon - From _Dragon_', 'images/Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg')">
-        <img src="Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Jinguchaa (From _Thug Life_) (Tamil) - A.R. Rahman.mp3','Jinguchaa (From _Thug Life_) (Tamil)', 'images/Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg')">
-        <img src="Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - K For Kabaradakkam (From _Guruvayoorambala Nadayil_) - Ankit Menon.mp3','K For Kabaradakkam (From _Guruvayoorambala Nadayil_)', 'images/Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg')">
-        <img src="Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Kanimaa (From _Retro_) - Santhosh Narayanan.mp3',' Kanimaa (From _Retro_)', 'images/Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg')">
-        <img src="Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
-        <img src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
-        <img src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
-        <img src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
-        <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
-        <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
-        <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-   </div>
-   <h1 class="vihead">Videos</h1>
-   <div class="playbox">
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     <div class="play"></div>
-     
-   </div>
-   <h1 class="newhead">News</h1>
-   <div class="playbox">
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     <div class="playnew"></div>
-     
-   </div>
-  
-  </div>
-  <div class="content-section1" id="musicContent" style="display: none;">
-    <h1 class="muhead">Music</h1>
-   <div class="musicpage">
-    <div class="playlist" onclick="togglePlayPause(this, 'audio/monica.mp3',' Monica (From _Coolie_) (Tamil)', 'images/Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg')">
-        <img src="Cover of Monica (From _Coolie_) (Tamil) by Anirudh Ravichander, Sublahshini, Asal Kolaar, Vishnu Edavan.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-     <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Chikitu (From _Coolie_) (Tamil) - Anirudh Ravichander.mp3','Chikitu (From _Coolie_) (Tamil)', 'images/Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg')">
-        <img src="Cover of Chikitu (From _Coolie_) (Tamil) by Anirudh Ravichander, T. Rajendar, Arivu.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Rise Of Dragon - From _Dragon_ - Leon James.mp3','Rise Of Dragon - From _Dragon_', 'images/Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg')">
-        <img src="Cover of Rise Of Dragon - From _Dragon_ by Leon James, Anirudh Ravichander, Vignesh Shivan.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Jinguchaa (From _Thug Life_) (Tamil) - A.R. Rahman.mp3','Jinguchaa (From _Thug Life_) (Tamil)', 'images/Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg')">
-        <img src="Cover of Jinguchaa (From _Thug Life_) (Tamil) by A.R. Rahman, Kamal Haasan, Vaishali Samant, Shakthisree Gopalan, Adithya RK.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - K For Kabaradakkam (From _Guruvayoorambala Nadayil_) - Ankit Menon.mp3','K For Kabaradakkam (From _Guruvayoorambala Nadayil_)', 'images/Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg')">
-        <img src="Cover of K For Kabaradakkam (From _Guruvayoorambala Nadayil_) by Ankit Menon, Asal Kolaar, Vinayak Sasikumar.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Kanimaa (From _Retro_) - Santhosh Narayanan.mp3',' Kanimaa (From _Retro_)', 'images/Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg')">
-        <img src="Cover of Kanimaa (From _Retro_) by Santhosh Narayanan, The Indian Choral Ensemble, Vivek.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-     
-     
-    </div>
-    <div class="musicpage1">
-     <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Og Sambavam (From _Good Bad Ugly_) - G. V. Prakash.mp3','Og Sambavam (From _Good Bad Ugly_)', 'images/Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg')">
-        <img src="Cover of Og Sambavam (From _Good Bad Ugly_) by G. V. Prakash, Adhik Ravi Chandran, Vishnu Edavan.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - God Bless U (From _Good Bad Ugly_) - Anirudh Ravichander.mp3','God Bless U (From _Good Bad Ugly_)', 'images/Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg')">
-        <img src="Cover of God Bless U (From _Good Bad Ugly_) by Anirudh Ravichander, Paal Dabba, G. V. Prakash, Rokesh.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Matta (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3',' Matta (From _The Greatest Of All Time_)', 'images/Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg')">
-        <img src="Cover of Matta (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Shenbagaraj, Velu, Sam, Narayanan Ravishankar.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Makkamishi - From _Brother_ - Harris Jayaraj.mp3','Makkamishi - From _Brother_', 'images/Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg')">
-        <img src="Cover of Makkamishi - From _Brother_ by Harris Jayaraj, Paal Dabba, Dacalty.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Spark (From _The Greatest Of All Time_) - Yuvan Shankar Raja.mp3','Spark (From _The Greatest Of All Time_)', 'images/Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg')">
-        <img src="Cover of Spark (From _The Greatest Of All Time_) by Yuvan Shankar Raja, Vrusha Balu.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-      <div class="playlist" onclick="togglePlayPause(this, 'audio/SpotiDownloader.com - Vandha Edam (From _Jawan_) - Anirudh Ravichander.mp3',' Vandha Edam (From _Jawan_) ', 'images/Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg')">
-        <img src="Cover of Vandha Edam (From _Jawan_) by Anirudh Ravichander, Vivek.jpg" class="imgs">
-        <div class="play-overlay">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-     
-    </div>
-    <div class="musicpage2">
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     
-    </div>
-     <div class="musicpage3">
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     
-    </div>
-     <div class="musicpage4">
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     
-    </div>
-     <div class="musicpage5">
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     <div class="playlist"></div>
-     
-    </div>
-  </div>
-  <div class="content-section2" id="videosContent" style="display: none;">
-    <h1 class="vihead1">Videos</h1>
-    <div class="videopage">
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-   </div>
-    <div class="videopage1">
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-   </div>
-    <div class="videopage2">
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-   </div>
-    <div class="videopage3">
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-   </div>
-    <div class="videopage4">
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-   </div>
-    <div class="videopage5">
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-     <div class="videolist"></div>
-   </div>
-  </div>
-  <div class="content-section3" id="newsContent" style="display: none;">
-    <h1 class="vihead1">News</h1>
-    <div class="newspage">
-      <div class="newbox"></div>
-      <div class="newbox"></div>
-    </div>
-     <div class="newspage1">
-      <div class="newbox"></div>
-      <div class="newbox"></div>
-    </div>
-     <div class="newspage2">
-      <div class="newbox"></div>
-      <div class="newbox"></div>
-    </div>
-     <div class="newspage3">
-      <div class="newbox"></div>
-      <div class="newbox"></div>
-    </div>
-     <div class="newspage4">
-      <div class="newbox"></div>
-      <div class="newbox"></div>
-    </div>
-     <div class="newspage5">
-      <div class="newbox"></div>
-      <div class="newbox"></div>
-    </div>
-  </div>
-</div>  
-<footer>
+  <footer>
     <p>© 2025 Zentro | All rights reserved.</p>
-</footer>
-<audio id="audioPlayer" controls style="display:none;"></audio>
-<div id="playerWrapper">
- <div id="musicPlayerBar">
-  <img id="playerCover" src="images/cover.jpg" alt="Cover" />
-  <div id="songInfo">
-    <div id="songTitle"></div>
-    <div id="timeControls">
-      <span id="currentTime">0:00</span>
-      <input type="range" id="progressBar" value="0" />
-      <span id="duration">0:00</span>
+  </footer>
+  <audio id="audioPlayer" controls style="display:none;"></audio>
+  <div id="playerWrapper">
+    <div id="musicPlayerBar">
+      <img id="playerCover" src="images/cover.jpg" alt="Cover" />
+      <div id="songInfo">
+        <div id="songTitle"></div>
+        <div id="timeControls">
+          <span id="currentTime">0:00</span>
+          <input type="range" id="progressBar" value="0" />
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+      <button id="playPauseBtn" onclick="togglePlayPauseFromBar()">▶</button>
     </div>
   </div>
-  <button id="playPauseBtn" onclick="togglePlayPauseFromBar()">▶</button>
- </div>
-</div>
-<audio id="audioPlayer"></audio>
+  <audio id="audioPlayer"></audio>
 
 
 </body>
+
 </html>
 <script src="script.js"></script>

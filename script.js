@@ -1,30 +1,30 @@
 
-  function toggleMenu() {
-    const menu = document.getElementById("settingsMenu");
-    menu.style.display = (menu.style.display === "block") ? "none" : "block";
-  }
+function toggleMenu() {
+  const menu = document.getElementById("settingsMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
 
-  function toggleThemeOptions() {
-    const options = document.getElementById("themeOptions");
-    options.style.display = (options.style.display === "block") ? "none" : "block";
-  }
+function toggleThemeOptions() {
+  const options = document.getElementById("themeOptions");
+  options.style.display = (options.style.display === "block") ? "none" : "block";
+}
 
-  function setTheme(color) {
-    document.body.style.backgroundColor = color;
-    // You can save to localStorage if needed
-  }
+function setTheme(color) {
+  document.body.style.backgroundColor = color;
+  // You can save to localStorage if needed
+}
 
-  function logout() {
-    alert("Logged out!");
-  }
+function logout() {
+  alert("Logged out!");
+}
 
-  document.addEventListener('click', function(event) {
-    const settings = document.querySelector('.settings');
-    if (!settings.contains(event.target)) {
-      document.getElementById("settingsMenu").style.display = "none";
-      document.getElementById("themeOptions").style.display = "none";
-    }
-  });
+document.addEventListener('click', function (event) {
+  const settings = document.querySelector('.settings');
+  if (!settings.contains(event.target)) {
+    document.getElementById("settingsMenu").style.display = "none";
+    document.getElementById("themeOptions").style.display = "none";
+  }
+});
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = {
     all: document.querySelector(".content-section"),
@@ -146,4 +146,3 @@ function togglePlayPause(card = null, songPath = null, title = "Unknown", cover 
 }
 
 
-  

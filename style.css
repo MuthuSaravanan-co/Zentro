@@ -1,8 +1,7 @@
-
 body {
   background-color: #73e6cb;
   min-height: 100vh;
-  overflow-x:hidden;
+  overflow-x: hidden;
   color: #0a3c30;
   font-family: 'Orbitron', sans-serif;
   margin: 0;
@@ -16,8 +15,10 @@ body {
   height: 3.5rem;
   background-color: black;
   display: flex;
-  gap: 65px; /* or whatever spacing you like */
-padding: 0 20px; /* optional: to add space from edges */
+  gap: 65px;
+  /* or whatever spacing you like */
+  padding: 0 20px;
+  /* optional: to add space from edges */
 
 }
 
@@ -27,29 +28,29 @@ footer {
   font-weight: 900;
   text-align: center;
   padding: 1rem;
-  background-color: #000000; 
+  background-color: #000000;
   color: #f0f0f0;
-  flex-shrink: 0; /* important for layout */
+  flex-shrink: 0;
+  /* important for layout */
 }
 
 
-.search
-   {
+.search {
   display: flex;
   align-items: center;
   background-color: #2e2e2e;
   border-radius: 25px;
-  
+
   width: 400px;
   max-width: 90%;
-  margin:  5.5px 100px ;
- 
+  margin: 5.5px 100px;
 
-  
+
+
 }
-  
 
-.search input{
+
+.search input {
   flex: 1;
   background: transparent;
   border: none;
@@ -59,133 +60,159 @@ footer {
   outline: none;
 
 }
-.icon-left{
-  
+
+.icon-left {
+
   color: #ffffff;
   font-size: 25px;
   padding: 0 9px;
   cursor: pointer;
-} 
+}
 
 
 .home {
   background-color: white;
   height: 40px;
   width: 40px;
-  border-radius: 50%;              /* makes it a perfect circle */
+  border-radius: 50%;
+  /* makes it a perfect circle */
   display: flex;
-  align-items: center;             /* vertical center */
-  justify-content: center;         /* horizontal center */
-  margin: 8px ;                /* adjust spacing as needed */
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  margin: 8px;
+  /* adjust spacing as needed */
 }
 
 .homebtn {
-  color: rgb(0, 0, 0);                    /* icon color inside circle */
+  color: rgb(0, 0, 0);
+  /* icon color inside circle */
   font-size: 20px;
   cursor: pointer;
 }
-   
-.heart{
+
+.heart {
   background-color: white;
   height: 40px;
   width: 40px;
-  border-radius: 50%;              /* makes it a perfect circle */
+  border-radius: 50%;
+  /* makes it a perfect circle */
   display: flex;
-  align-items: center;             /* vertical center */
-  justify-content: center;         /* horizontal center */
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
   margin: 8px
-
 }
 
 .heartbtn {
-  color: rgb(0, 0, 0);                    /* icon color inside circle */
+  color: rgb(0, 0, 0);
+  /* icon color inside circle */
   font-size: 20px;
   cursor: pointer;
- 
+
 }
 
-.bell{
+.bell {
   background-color: white;
   height: 40px;
   width: 40px;
-  border-radius: 50%;              /* makes it a perfect circle */
+  border-radius: 50%;
+  /* makes it a perfect circle */
   display: flex;
-  align-items: center;             /* vertical center */
-  justify-content: center;         /* horizontal center */
-  margin: 8px ; 
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  margin: 8px;
 
 }
 
 .bellbtn {
-  color: rgb(0, 0, 0);                    /* icon color inside circle */
+  color: rgb(0, 0, 0);
+  /* icon color inside circle */
   font-size: 20px;
   cursor: pointer;
- 
+
 }
 
-.settings{
+.settings {
   background-color: white;
   height: 40px;
   width: 40px;
-  border-radius: 50%;              /* makes it a perfect circle */
+  border-radius: 50%;
+  /* makes it a perfect circle */
   display: flex;
-  align-items: center;             /* vertical center */
-  justify-content: center;         /* horizontal center */
-  margin: 8px ; 
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  margin: 8px;
 
 }
 
 .settingsbtn {
-  color: rgb(0, 0, 0);                    /* icon color inside circle */
+  color: rgb(0, 0, 0);
+  /* icon color inside circle */
   font-size: 20px;
   cursor: pointer;
- 
+
 }
 
-.user{
+.user {
   background-color: white;
   height: 40px;
   width: 40px;
-  border-radius: 50%;              /* makes it a perfect circle */
+  border-radius: 50%;
+  /* makes it a perfect circle */
   display: flex;
-  align-items: center;             /* vertical center */
-  justify-content: center;         /* horizontal center */
-  margin: 8px ; 
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  margin: 8px;
 
 }
 
 .userbtn {
-  color: rgb(0, 0, 0);                    /* icon color inside circle */
+  color: rgb(0, 0, 0);
+  /* icon color inside circle */
   font-size: 20px;
   cursor: pointer;
- 
+
 }
 
-.logo{
+.logo {
   background-color: white;
   height: 40px;
   width: 40px;
-  border-radius: 50%;              /* makes it a perfect circle */
+  border-radius: 50%;
+  /* makes it a perfect circle */
   display: flex;
-  align-items: center;             /* vertical center */
-  justify-content: center;         /* horizontal center */
-  margin: 8px ; 
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  margin: 8px;
 
 }
 
 .logobtn {
-  color: rgb(0, 0, 0);                    /* icon color inside circle */
+  color: rgb(0, 0, 0);
+  /* icon color inside circle */
   font-size: 20px;
   cursor: pointer;
   width: 42px;
   border-radius: 50%;
 
- 
+
 }
 
 
 .settings {
-  position: relative; /* so the menu can be positioned absolutely */
+  position: relative;
+  /* so the menu can be positioned absolutely */
 }
 
 /* The dropdown menu */
@@ -195,11 +222,17 @@ footer {
   right: 0;
   background: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   width: 150px;
-  display: none; /* hide by default */
+  display: none;
+  /* hide by default */
   z-index: 100;
 }
+
+
+
+
+
 
 .settings-menu ul {
   list-style: none;
@@ -235,15 +268,14 @@ footer {
   margin-right: 10px;
   display: inline-block;
 }
- 
-.select
-{
-   display: flex;
+
+.select {
+  display: flex;
   align-items: center;
   margin-top: 10px;
   gap: 20px;
   margin-left: 30px;
-  
+
 }
 
 .all {
@@ -253,11 +285,11 @@ footer {
   border-radius: 50px;
   justify-content: center;
   align-items: center;
-   display: flex;
-   color: #ffffff;
-   cursor: pointer;
-   
-  
+  display: flex;
+  color: #ffffff;
+  cursor: pointer;
+
+
 }
 
 .music {
@@ -265,44 +297,44 @@ footer {
   height: 25px;
   background-color: #000000;
   border-radius: 50px;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
-   display: flex;
-   color: #ffffff;
-   cursor: pointer;
-  
+  display: flex;
+  color: #ffffff;
+  cursor: pointer;
+
 }
 
 
-.videos{
+.videos {
   width: 82px;
   height: 25px;
   background-color: #000000;
   border-radius: 50px;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
-   display: flex;
-   color: #ffffff;
-   cursor: pointer;
-  
+  display: flex;
+  color: #ffffff;
+  cursor: pointer;
+
 
 }
 
-.news{
+.news {
   width: 70px;
   height: 25px;
   background-color: #000000;
   border-radius: 50px;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
-   display: flex;
-   color: #ffffff;
-   cursor: pointer; 
-  
+  display: flex;
+  color: #ffffff;
+  cursor: pointer;
+
 
 }
 
-h1{
+h1 {
   font-size: 17px;
 }
 
@@ -314,9 +346,9 @@ h1{
   height: 850px;
   color: #000;
   font-size: 18px;
-  width:100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .content-section1 {
@@ -326,9 +358,9 @@ h1{
   height: 1400px;
   color: #000;
   font-size: 18px;
-  width:100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .content-section2 {
@@ -338,24 +370,24 @@ h1{
   height: 1800px;
   color: #000;
   font-size: 18px;
-  width:100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 }
 
-.content-section3{
+.content-section3 {
   margin-top: 20px;
   padding: 20px;
   background-color: white;
   height: 3600px;
   color: #000;
   font-size: 18px;
-  width:100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 }
 
-.playlist{
+.playlist {
   height: 140px;
   width: 140px;
   background-color: #0a3c30;
@@ -366,6 +398,9 @@ h1{
   align-items: center;
   scroll-snap-align: start;
   flex-shrink: 0;
+
+
+
 }
 
 
@@ -373,10 +408,29 @@ h1{
   display: flex;
   gap: 30px;
   overflow-x: auto;
+  height: 210px;
+
   padding: 10px 30px;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin; /* Firefox */
-  -webkit-overflow-scrolling: touch; /* for smooth iOS scrolling */
+  scrollbar-width: thin;
+  /* Firefox */
+  -webkit-overflow-scrolling: touch;
+  /* for smooth iOS scrolling */
+}
+
+
+.song-name {
+  margin-top: 190px;
+  font-size: 14px;
+  color: #0a3c30;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 100%;
+  word-wrasongp: break-word;
+  white-space: normal;
+  margin-left: -140px;
+
 }
 
 .playbox::-webkit-scrollbar {
@@ -389,7 +443,8 @@ h1{
 }
 
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -398,13 +453,13 @@ html, body {
   flex-direction: column;
 }
 
-.main{
+.main {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.muhead{
+.muhead {
   font-size: 25px;
   margin-left: 0;
   margin-top: 0;
@@ -412,7 +467,7 @@ html, body {
 }
 
 
-.play{
+.play {
   height: 140px;
   width: 240px;
   background-color: #0a3c30;
@@ -425,14 +480,15 @@ html, body {
   flex-shrink: 0;
 }
 
-.vihead,.newhead{
+.vihead,
+.newhead {
   font-size: 25px;
   margin-left: 0;
   margin-top: 20px;
 
 }
 
-.playnew{
+.playnew {
   height: 200px;
   width: 200px;
   background-color: #0a3c30;
@@ -446,31 +502,35 @@ html, body {
 }
 
 
-.musicpage{
-   display: flex;
+.musicpage {
+  display: flex;
   gap: 94px;
 
 }
 
-.musicpage1,.musicpage2,.musicpage3,.musicpage4,.musicpage5
-{
+.musicpage1,
+.musicpage2,
+.musicpage3,
+.musicpage4,
+.musicpage5 {
   margin-top: 90px;
   display: flex;
   gap: 94px;
 }
-.vihead1{
+
+.vihead1 {
   margin: 0;
   font-size: 25px;
 }
 
-.videopage{
+.videopage {
   display: flex;
   gap: 94px;
 
 }
 
-.videolist{
-   height: 210px;
+.videolist {
+  height: 210px;
   width: 378px;
   background-color: #0a3c30;
   margin-top: 5px;
@@ -481,8 +541,11 @@ html, body {
 
 }
 
-.videopage1,.videopage2,.videopage3,.videopage4,.videopage5
-{
+.videopage1,
+.videopage2,
+.videopage3,
+.videopage4,
+.videopage5 {
   margin-top: 90px;
   display: flex;
   gap: 94px;
@@ -490,8 +553,8 @@ html, body {
 }
 
 
-.newspage{
-   display: flex;
+.newspage {
+  display: flex;
   gap: 110px;
   margin-left: 90px;
   margin-top: 10px;
@@ -499,8 +562,8 @@ html, body {
 
 }
 
-.newbox{
-   height: 520px;
+.newbox {
+  height: 520px;
   width: 478px;
   background-color: #0a3c30;
   margin-top: 5px;
@@ -512,21 +575,25 @@ html, body {
 
 }
 
-.newspage1,.newspage2,.newspage3,.newspage4,.newspage5
-{
-   display: flex;
+.newspage1,
+.newspage2,
+.newspage3,
+.newspage4,
+.newspage5 {
+  display: flex;
   gap: 110px;
   margin-left: 90px;
   margin-top: 80px;
 
 }
 
-.imgs{
-  height: 140px;
-  width: 140px;
-  border-radius: 20px;
-
+.imgs {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
 }
+
 
 .playlist {
   position: relative;
@@ -535,32 +602,31 @@ html, body {
 }
 
 .playlist:hover {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
+  /* Slight zoom effect */
 }
+
 
 .play-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  display: none;
 }
 
-.play-overlay i {
-  color: white;
-  font-size: 40px;
+
+.playlist:hover .play-overlay {
+  display: block;
 }
+
 
 .playlist:hover .play-overlay {
   opacity: 1;
 }
+
 #musicPlayerBar {
   position: fixed;
   bottom: 0;
@@ -582,6 +648,19 @@ html, body {
   object-fit: cover;
   margin-right: 15px;
   border-radius: 5px;
+}
+
+.-name {
+  margin-top: 200px;
+  font-size: 14px;
+  color: #0a3c30;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 100%;
+  word-wrasongp: break-word;
+  white-space: normal;
+  margin-left: -140px;
 }
 
 #songInfo {
@@ -615,16 +694,21 @@ html, body {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /* Prevent right-side space */
+  overflow-x: hidden;
+  /* Prevent right-side space */
   width: 100%;
 }
+
+
+
 
 
 
@@ -655,7 +739,10 @@ html, body {
     margin-left: -290px;
   }
 
-  .all, .music, .videos, .news {
+  .all,
+  .music,
+  .videos,
+  .news {
     width: auto;
     padding: 5px 15px;
     font-size: 14px;
@@ -693,7 +780,8 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-left: 0; /* ✅ FIXED */
+    margin-left: 0;
+    /* ✅ FIXED */
   }
 
   .playlist,
@@ -716,11 +804,13 @@ html, body {
 /* Extra small mobile fix */
 @media (max-width: 372px) {
   body {
-    width: 100%; /* ✅ FIXED */
+    width: 100%;
+    /* ✅ FIXED */
   }
 
   .head {
-    width: 100%; /* ✅ FIXED */
+    width: 100%;
+    /* ✅ FIXED */
     gap: 3px;
   }
 
@@ -732,13 +822,43 @@ html, body {
     display: none;
   }
 
+  .playbox {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-left: 10px;
+    /* or 0 */
+    scroll-padding-left: 10px;
+    /* smooth scroll alignment */
+    margin-top: -20px;
+  }
+
+  .song-name {
+    margin-top: 170px;
+    font-size: 14px;
+    color: #0a3c30;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 100%;
+    word-wrasongp: break-word;
+    white-space: normal;
+    margin-left: -110px;
+
+  }
+
+
+
   .select {
     margin-left: -48px;
     margin-top: 10px;
-    gap:8px;
+    gap: 8px;
   }
 
-  .all, .music, .videos, .news {
+  .all,
+  .music,
+  .videos,
+  .news {
     padding: 2px 7px;
     font-size: 7px;
   }
@@ -747,47 +867,81 @@ html, body {
   .content-section1,
   .content-section2,
   .content-section3 {
-    width: 100%; /* ✅ FIXED */
+    width: 100%;
+    /* ✅ FIXED */
   }
 
   #musicPlayerBar {
-    max-width: 100%; /* ✅ FIXED */
+    max-width: 100%;
+    /* ✅ FIXED */
     margin-left: 0;
   }
 
-  .logo,.logobtn{
+  .logo,
+  .logobtn {
     margin-left: 4px;
   }
 
-  .playlist{
-    width: 140px;
+  .playlist,
+  .imgs {
+    width: 110px;
+    height: 110px;
   }
 
- 
+  .playbox {
+    gap: 30px;
 
-#songInfo {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-}
-
-#songTitle {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scrollText 18s linear infinite;
-  color: #fff;
-  font-size: 16px;
-  padding-left: 100%; /* so it starts offscreen */
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateX(0%);
   }
-  100% {
-    transform: translateX(-100%);
+
+  .videolist,
+  .play {
+    height: 140px;
   }
-}
+
+
+  .playnew,
+  .newbox {
+    height: 200px;
+  }
+
+  .musicpage{
+    gap: 60px;
+  }
+
+  .musicpage1{
+    margin-top: 55px;
+    gap: 60px;
+  }
+
+  .content-section1{
+    height: 3190px;
+  }
+
+  #songInfo {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+  }
+
+  #songTitle {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 18s linear infinite;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 100%;
+    /* so it starts offscreen */
+  }
+
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
 }
