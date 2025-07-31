@@ -1,4 +1,3 @@
-
 function toggleMenu() {
   const menu = document.getElementById("settingsMenu");
   menu.style.display = (menu.style.display === "block") ? "none" : "block";
@@ -11,13 +10,14 @@ function toggleThemeOptions() {
 
 function setTheme(color) {
   document.body.style.backgroundColor = color;
-  // You can save to localStorage if needed
+  // Optionally save theme
 }
 
 function logout() {
   alert("Logged out!");
 }
 
+// Hide menus if clicking outside
 document.addEventListener('click', function (event) {
   const settings = document.querySelector('.settings');
   if (!settings.contains(event.target)) {
@@ -25,38 +25,33 @@ document.addEventListener('click', function (event) {
     document.getElementById("themeOptions").style.display = "none";
   }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = {
     all: document.querySelector(".content-section"),
     music: document.querySelector(".content-section1"),
-   
+    // Add more sections here if needed
   };
 
   function showOnly(selectedKey) {
     for (const key in tabs) {
-      tabs[key].style.display = (key === selectedKey) ? "block" : "none";
+      if (selectedKey === "all") {
+        tabs[key].style.display = "block"; // Show all sections
+      } else {
+        tabs[key].style.display = (key === selectedKey) ? "block" : "none";
+      }
     }
   }
 
-  // Set initial section
+  // Initial section
   showOnly("all");
 
-  // Tab event listeners
+  // Tab buttons
   document.querySelector(".all").addEventListener("click", () => showOnly("all"));
   document.querySelector(".music").addEventListener("click", () => showOnly("music"));
-  
 });
 
-function playSong(songPath) {
-  const audio = document.getElementById("audioPlayer");
-  audio.src = songPath;
-  audio.play().catch((err) => {
-    alert("Audio playback blocked by browser. Please click on the page first.");
-    console.error(err);
-  });
-}
-
-let currentSong = null;
+// Audio player
 let isPlaying = false;
 const audio = document.getElementById("audioPlayer");
 const playPauseBtn = document.getElementById("playPauseBtn");
@@ -68,32 +63,34 @@ const durationDisplay = document.getElementById("duration");
 
 function togglePlayPause(card = null, songPath = null, title = "Unknown", cover = "images/cover.jpg") {
   if (songPath) {
-    currentSong = songPath;
     audio.src = songPath;
+    audio.play();
     songTitle.textContent = title;
     playerCover.src = cover;
-    audio.play();
-    isPlaying = true;
     playPauseBtn.textContent = "⏸";
+    isPlaying = true;
   } else {
-    if (isPlaying) {
-      audio.pause();
-      playPauseBtn.textContent = "▶";
-    } else {
+    if (audio.paused) {
       audio.play();
       playPauseBtn.textContent = "⏸";
+      isPlaying = true;
+    } else {
+      audio.pause();
+      playPauseBtn.textContent = "▶";
+      isPlaying = false;
     }
-    isPlaying = !isPlaying;
   }
 }
 
 function togglePlayPauseFromBar() {
-  togglePlayPause(); // no songPath means toggle current
+  togglePlayPause();
 }
 
-// Update progress bar
+// Progress bar update
 audio.addEventListener("timeupdate", () => {
-  progressBar.value = (audio.currentTime / audio.duration) * 100 || 0;
+  if (audio.duration) {
+    progressBar.value = (audio.currentTime / audio.duration) * 100;
+  }
   currentTimeDisplay.textContent = formatTime(audio.currentTime);
   durationDisplay.textContent = formatTime(audio.duration);
 });
@@ -113,34 +110,3 @@ function formatTime(seconds) {
   const sec = Math.floor(seconds % 60).toString().padStart(2, "0");
   return `${min}:${sec}`;
 }
-
-function togglePlayPause(card = null, songPath = null, title = "Unknown", cover = "images/cover.jpg") {
-  const audio = document.getElementById("audioPlayer");
-  const playPauseBtn = document.getElementById("playPauseBtn");
-  const songTitle = document.getElementById("songTitle");
-  const playerCover = document.getElementById("playerCover");
-
-  // If a new song is clicked
-  if (songPath) {
-    audio.src = songPath;
-    audio.play();
-
-    songTitle.textContent = title; // ✅ Update the name
-    playerCover.src = cover;       // ✅ Update the image
-
-    playPauseBtn.textContent = "⏸";
-    isPlaying = true;
-  } else {
-    if (audio.paused) {
-      audio.play();
-      playPauseBtn.textContent = "⏸";
-      isPlaying = true;
-    } else {
-      audio.pause();
-      playPauseBtn.textContent = "▶";
-      isPlaying = false;
-    }
-  }
-}
-
-
