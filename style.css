@@ -841,7 +841,7 @@ body {
     font-weight: bold;
     line-height: 1.2;
     max-width: 100%;
-    word-wrasongp: break-word;
+    word-wrap: break-word;
     white-space: normal;
     margin-left: -110px;
 
@@ -922,6 +922,8 @@ body {
     white-space: nowrap;
     position: relative;
     width: 100%;
+    gap: 30px;
+   
   }
 
   #songTitle {
@@ -936,6 +938,13 @@ body {
 
   #timeControls{
     font-size: 13px;
+    
+  }
+
+ 
+
+ 
+
   }
 
   @keyframes scrollText {
@@ -948,4 +957,3 @@ body {
     }
   }
 
-}
