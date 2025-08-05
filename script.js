@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabs = {
     all: document.querySelector(".content-section"),
     music: document.querySelector(".content-section1"),
-    videos: document.querySelector(".content-section2"),
-    news: document.querySelector(".content-section3")
+   
   };
 
   function showOnly(selectedKey) {
@@ -45,8 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tab event listeners
   document.querySelector(".all").addEventListener("click", () => showOnly("all"));
   document.querySelector(".music").addEventListener("click", () => showOnly("music"));
-  document.querySelector(".videos").addEventListener("click", () => showOnly("videos"));
-  document.querySelector(".news").addEventListener("click", () => showOnly("news"));
+  
 });
 
 function playSong(songPath) {

@@ -72,9 +72,9 @@
       <div class="music">
         <h1>Music</h1>
       </div>
-      <div class="videos">
+      <a href="https://video-60043387196.development.catalystserverless.in/app/index.html"><div class="videos">
         <h1>Videos</h1>
-      </div>
+      </div></a>
       <div class="news">
         <h1>News</h1>
       </div>
@@ -200,16 +200,32 @@
       </div>
       <h1 class="vihead">Videos</h1>
       <div class="playbox">
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
-        <div class="play"></div>
+        <div class="play">
+             <iframe  class="play" src="https://www.youtube.com/embed/qz0aGYrrlhU?si=XVLUYRfNrehWHlAp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+       <p class="vname">HTML course</p>
+            </div>
+        <div class="play">
+             <iframe class="play" src="https://www.youtube.com/embed/FYErehuSuuw?si=Jc4E1ayc2LREaeBj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <p class="vname">HTML course(Tamil)</p>
+            </div>
+        <div class="play">
+          <iframe class="play" src="https://www.youtube.com/embed/-G-zic_LS0A?si=YT8C3hMTqiJTBQNS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="vname">CSS course</p>
+        </div>
+         <div class="play">
+          <iframe class="play" src="https://www.youtube.com/embed/vfs1wBDoqBY?si=8xXHThucMJaYB_qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="vname">CSS course(Tamil)</p>
+        </div>
+         <div class="play">
+          <iframe class="play"src="https://www.youtube.com/embed/W6NZfCO5SIk?si=4l0ENt1Snar7JC9Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="vname">javascript course</p>
+        </div>
+         <div class="play">
+          <iframe class="play" src="https://www.youtube.com/embed/poo0BXryffI?si=qyMZuw8qPA8vmG4j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="vname">javascript tutorial(Tamil)</p>
+        </div>
+
+    
 
       </div>
       <h1 class="newhead">News</h1>
@@ -583,71 +599,16 @@
       
      
     </div>
-    <div class="content-section2" id="videosContent" style="display: none;">
-      <h1 class="vihead1">Videos</h1>
-      <div class="videopage">
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-      </div>
-      <div class="videopage1">
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-      </div>
-      <div class="videopage2">
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-      </div>
-      <div class="videopage3">
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-      </div>
-      <div class="videopage4">
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-      </div>
-      <div class="videopage5">
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-        <div class="videolist"></div>
-      </div>
-    </div>
-    <div class="content-section3" id="newsContent" style="display: none;">
-      <h1 class="vihead1">News</h1>
-      <div class="newspage">
-        <div class="newbox"></div>
-        <div class="newbox"></div>
-      </div>
-      <div class="newspage1">
-        <div class="newbox"></div>
-        <div class="newbox"></div>
-      </div>
-      <div class="newspage2">
-        <div class="newbox"></div>
-        <div class="newbox"></div>
-      </div>
-      <div class="newspage3">
-        <div class="newbox"></div>
-        <div class="newbox"></div>
-      </div>
-      <div class="newspage4">
-        <div class="newbox"></div>
-        <div class="newbox"></div>
-      </div>
-      <div class="newspage5">
-        <div class="newbox"></div>
-        <div class="newbox"></div>
-      </div>
-    </div>
-  </div>
+    
+
   <footer>
     <p>© 2025 Zentro | All rights reserved.</p>
   </footer>
+
+  <!-- Audio Player -->
   <audio id="audioPlayer" controls style="display:none;"></audio>
+
+  <!-- Music Player Bar -->
   <div id="playerWrapper">
     <div id="musicPlayerBar">
       <img id="playerCover" src="images/cover.jpg" alt="Cover" />
@@ -662,10 +623,15 @@
       <button id="playPauseBtn" onclick="togglePlayPauseFromBar()">▶</button>
     </div>
   </div>
-  <audio id="audioPlayer"></audio>
 
+  <script src="script.js"></script>
+  <script>
+    // Optional fallback if cover image not found
+    document.getElementById("playerCover").onerror = function () {
+      this.src = "images/default-cover.jpg";
+    };
+  </script>
 
 </body>
 
 </html>
-<script src="script.js"></script>
